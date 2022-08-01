@@ -10,6 +10,7 @@ services:
      ipv4_address: 192.168.56.1
    ports:
       - "5566:5566"
+      - "5901:5901"
    devices:
      - "/tmp/ttyUR:/tmp/ttyUR"
    build:
@@ -46,7 +47,7 @@ services:
      #VERSION: 3.15.3.106223
 networks:
  static_test_net:
-  driver: bridge
+  driver: host
   ipam:
    config:
     - subnet: 192.168.0.0/16
